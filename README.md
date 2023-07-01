@@ -1,2 +1,0 @@
-# RealMoneyMakingArt
-RMMA
