@@ -1,9 +1,6 @@
-/*
-Theme Name: Vibrant 
-Author URI: http://webthemez.com/
-Description: This theme is a best responsive web template. It would be great for a corporate websites, business websites, personal blog.
-License: Free to use for personal and commercial, but you need to place back link in the bottom of the template.
-*/
+// Custom Script
+// Developed by: Samson.Onna
+// CopyRights : http://webthemez.com
 var customScripts = {
     profile: function () {
      	 var portfolio = $('#portfolio');
@@ -67,7 +64,7 @@ var customScripts = {
                 return false;
             });
 			$("a[href='#basics']").click(function () {
-                $("html, body").animate({ scrollTop: $('#features').offset().top - 75 }, "slow"); 
+                $("html, body").animate({ scrollTop: $('#services').offset().top - 75 }, "slow"); 
                 return false;
             });
     }, 
@@ -93,28 +90,14 @@ var customScripts = {
 	waySlide: function(){
 		  	/* Waypoints Animations
 		   ------------------------------------------------------ */		   			  
-			$('#aboutUs').waypoint(function() {				
+			$('.design').waypoint(function() {				
 			$('.design').addClass( 'animated fadeInUp show' );   
-			}, { offset: 350 }); 
-			
-			$('.features').waypoint(function() { 
-			$('.phone-image').addClass( 'animated bounceIn' ); 
-			$('.features-left').addClass( 'animated fadeInLeft show' );   
-			$('.features-right').addClass( 'animated fadeInRight show' );  
-			}, { offset: 350 });
-			$('#services').waypoint(function() {    
-			$('.serviceBox').addClass( 'animated fadeInRight show' );  
-			$('.owl-wrapper-outer').addClass( 'animated fadeInRight show' ); 
-			}, { offset: 350 });
-			$('#work').waypoint(function() {    
-			 $('#portfolio').addClass( 'animated fadeInRight show' ); 
-			}, { offset: 350 });
-			
-			
+			}, { offset: 'bottom-in-view' });
+			 						 
 		},
 		fitText: function(){			  
 				setTimeout(function() {			
-				$('h1.responsive-headline').fitText(1.2, { minFontSize: '16px', maxFontSize: '40px' });			
+				$('h1.responsive-headline').fitText(1.2, { minFontSize: '16px', maxFontSize: '30px' });			
 				}, 100);
 		},
     init: function () {
@@ -129,5 +112,4 @@ var customScripts = {
 }
 $('document').ready(function () {
     customScripts.init();
-	$('.features-left, .features-right, .design, .serviceBox, .owl-wrapper-outer, #portfolio').css('opacity','0');
 });
